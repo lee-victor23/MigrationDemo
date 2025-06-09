@@ -3,11 +3,9 @@ using MigrationDemo.Models;
 
 namespace MigrationDemo.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        : DbContext(options)
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options) { }
-
         // Add your DbSets here
         // Example: public DbSet<User> Users { get; set; }
         public DbSet<User> Users { get; set; }
