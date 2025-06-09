@@ -1,6 +1,0 @@
-### Get all users
-@MigrationDemo_HostAddress = http://localhost:5084
-
-GET {{MigrationDemo_HostAddress}}/api/users
-Accept: application/json
-###

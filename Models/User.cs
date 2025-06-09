@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MigrationDemo.Models
 {
@@ -19,6 +20,7 @@ namespace MigrationDemo.Models
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
-        public bool IsActive { get; set; } = true;
+        [Column("IsUserActivated")]
+        public bool IsUserActivated { get; set; } = true;
     }
 }
